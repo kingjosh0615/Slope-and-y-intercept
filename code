@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class Main {
+	  public static void main(String[] args) {
+Scanner myScanner = new Scanner(System.in);
+System.out.println("Want to know the y-intercept of a line? How about the slope?");
+
+System.out.println("Input the X of the first point.");
+String firstX = myScanner.nextLine();
+
+System.out.println("Input the Y of the first point.");
+String firstY = myScanner.nextLine();
+
+System.out.println("Input the X of the second point.");
+String secondX = myScanner.nextLine();
+
+System.out.println("Input the X of the second point.");
+String secondY = myScanner.nextLine();
+
+int firstXInt=Integer.parseInt(firstX); 
+int firstYInt=Integer.parseInt(firstY); 
+int secondXInt=Integer.parseInt(secondX); 
+int secondYInt=Integer.parseInt(secondY); 
+
+int slopeRise = secondYInt - firstYInt;
+int slopeRun = secondXInt - firstXInt;
+
+int xZero = firstXInt;
+int firstYIntDub = firstYInt;
+
+while(xZero > 0) {
+firstYIntDub --;
+xZero--;
+			}
+
+if (xZero == 0) {
+System.out.println("The y-intercept is " + firstYIntDub + ".");
+			}
+else {
+System.out.println("loading...");
+			}
+
+System.out.println("The slope is " + slopeRise + "/" + slopeRun + ".");
+
+	  }
+}
